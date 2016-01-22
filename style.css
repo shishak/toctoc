@@ -1,0 +1,272 @@
+        body {
+            -moz-osx-font-smoothing: grayscale;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-font-smoothing: antialiased;
+            -webkit-user-select: none;
+            background: #595959;
+            cursor: default;
+            font-family: sans-serif;
+            font-smoothing: antialiased;
+            margin: 0;
+            user-select: none
+        }
+        .grid {
+            margin: 0 auto;
+            margin-top: 50px;
+            position: relative;
+            width: 99%
+        }
+        .grid-item {
+            background: #555;
+            border-radius: 3px;
+            position: absolute;
+            transition: .3s cubic-bezier(.4, .2, .5, 1.4)
+        }
+        #navigation {
+            display: none
+        }
+        .drawer {
+            -webkit-box-shadow: 1px 0 1px rgba(0, 0, 0, 0.08);
+            background: #25A95C;
+            box-shadow: 1px 0 1px rgba(0, 0, 0, 0.3);
+            height: 100%;
+            position: fixed;
+            width: 16em;
+            z-index: 2
+        }
+        .drawer a {
+            color: rgba(255, 255, 255, 0.73);
+            display: block;
+            font-size: 1.3em;
+            font-weight: 400;
+            line-height: 4em;
+            padding-left: 1.5em;
+            text-decoration: none
+        }
+        .drawer a:hover {
+            background: #289A58;
+            color: #fff
+        }
+        button {
+            outline: 0
+        }
+        main {
+            margin-left: 16em;
+            padding: 1em .1em .1em
+        }
+        @media screen and (max-width: 1550px) {
+            #navigation:checked~#overlay {
+                display: block
+            }
+            #navigation:checked~.drawer {
+                -webkit-transform: translateX(0);
+                transform: translateX(0)
+            }
+            .drawer {
+                -webkit-transform: translateX(-105%);
+                transform: translateX(-105%);
+                transition: -webkit-transform .2s cubic-bezier(.64, .09, .08, 1);
+                transition: transform .2s cubic-bezier(.64, .09, .08, 1)
+            }
+            main {
+                margin: 0
+            }
+        }
+        #overlay {
+            -webkit-animation: fadein .5s;
+            animation: fadein .5s;
+            background: rgba(0, 0, 0, .3);
+            display: none;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1
+        }
+        .logo {
+            height: 0;
+            padding-top: 8em;
+            text-align: center
+        }
+        .right {
+            float: right;
+            margin-left: 0;
+            margin-right: 10px
+        }
+        button {
+            -moz-border-radius: 50%;
+            -moz-transition: background-color .2s;
+            -o-transition: background-color .2s;
+            -webkit-border-radius: 50%;
+            -webkit-transition: background-color .2s;
+            background: rgba(0, 0, 0, 0.03);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            height: 48px;
+            margin: 12px;
+            padding: 12px;
+            transition: background-color .2s;
+            width: 48px
+        }
+        button:hover {
+            background: rgba(0, 0, 0, 0.09)
+        }
+        footer {
+            background: #555;
+            bottom: 0;
+            color: gray;
+            font-size: .8em;
+            height: 200px;
+            margin-top: 300px;
+            padding-top: 200px;
+            text-align: center;
+            width: 100%
+        }
+        header {
+            background: #595959;
+            height: 4.3em;
+            top: 0;
+            width: 100%;
+            position: fixed;
+            z-index: 1
+        }
+        .ripple {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            transition: background-color .3s
+        }
+        .ripple:active:before {
+            padding-top: 120%;
+            transition: width .2s ease-out, padding-top .2s ease-out;
+            width: 120%
+        }
+        .ripple:before {
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, .05);
+            border-radius: 100%;
+            content: "";
+            display: block;
+            left: 50%;
+            padding-top: 0;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 0
+        }
+        .ripple>* {
+            position: relative
+        }
+        .icon-drawer {
+            fill: #fff;
+            display: inline-block;
+            height: 2.5em;
+            margin-right: 1em;
+            padding: .01em;
+            top: .8em;
+            width: 2.5em
+        }
+        .icon-button:hover {
+            background-color: rgba(0, 0, 0, .05)
+        }
+        .icon-button:active {
+            background-color: rgba(0, 0, 0, .1)
+        }
+        .icon-button {
+            cursor: pointer;
+            height: 48px;
+            width: 48px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            border: none;
+            -webkit-transition: background-color .2s;
+            -moz-transition: background-color .2s;
+            -o-transition: background-color .2s;
+            transition: background-color .2s;
+            margin: 12px;
+            padding: 12px
+        }
+        .app-icon-image {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -moz-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -moz-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: 300px
+        }
+        .app-icon-card {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -moz-box-orient: vertical;
+            -moz-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -moz-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            overflow: hidden
+        }
+        .app-icon-title {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -moz-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex
+        }
+        .app-icon-details {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -moz-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: 300px
+        }
